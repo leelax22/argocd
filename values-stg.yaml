@@ -117,7 +117,7 @@ extraEnvVarsSecret: ""
 
 ## @param replicaCount Number of NGINX replicas to deploy
 ##
-replicaCount: 1
+replicaCount: 2
 ## @param updateStrategy.type NGINX deployment strategy type
 ## @param updateStrategy.rollingUpdate NGINX deployment rolling update configuration parameters
 ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#strategy
@@ -519,8 +519,8 @@ service:
   ## @param service.ports.https Service HTTPS port
   ##
   ports:
-    http: 80
-    https: 443
+    http: 3010
+    https: 3011
   ##
   ## @param service.nodePorts [object] Specify the nodePort(s) value(s) for the LoadBalancer and NodePort service types.
   ## ref: https://kubernetes.io/docs/concepts/services-networking/service/#type-nodeport
